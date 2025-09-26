@@ -81,7 +81,7 @@ banned = []
 for a in accounts:
     phn = a[0]
     print(f'{plus}{grey} Checking {lg}{phn}')
-    clnt = TelegramClient(f'sessions/{phn}', 3910389, '86f861352f0ab76a251866059a6adbd6')
+    clnt = TelegramClient(f'sessions/{phn}', 29691422, '7c2435a38e1c9f7417f62a5497db767a')
     clnt.connect()
     if not clnt.is_user_authorized():
         try:
@@ -120,7 +120,7 @@ def send_message_all_accounts():
     full_message = f"{message}\n\n{promotional_message}"
     for account in accounts:
         phone = str(account[0])
-        client = TelegramClient(f'sessions/{phone}', 3910389, '86f861352f0ab76a251866059a6adbd6')
+        client = TelegramClient(f'sessions/{phone}', 29691422, '7c2435a38e1c9f7417f62a5497db767a')
         client.connect()
         if client.is_user_authorized():
             try:
@@ -136,7 +136,7 @@ def join_group_all_accounts():
     link = input(f'\n{lg} [~] Enter the group/channel link to join: {r}')
     for account in accounts:
         phone = str(account[0])
-        client = TelegramClient(f'sessions/{phone}', 3910389, '86f861352f0ab76a251866059a6adbd6')
+        client = TelegramClient(f'sessions/{phone}', 29691422, '7c2435a38e1c9f7417f62a5497db767a')
         client.connect()
         if client.is_user_authorized():
             try:
@@ -152,7 +152,7 @@ def leave_group_all_accounts():
     link = input(f'\n{lg} [~] Enter the group/channel link to leave: {r}')
     for account in accounts:
         phone = str(account[0])
-        client = TelegramClient(f'sessions/{phone}', 3910389, '86f861352f0ab76a251866059a6adbd6')
+        client = TelegramClient(f'sessions/{phone}', 29691422, '7c2435a38e1c9f7417f62a5497db767a')
         client.connect()
         if client.is_user_authorized():
             try:
@@ -169,7 +169,7 @@ def report_group_all_accounts():
     reason = input(f'\n{lg} [~] Enter the reason for reporting: {r}')
     for account in accounts:
         phone = str(account[0])
-        client = TelegramClient(f'sessions/{phone}', 3910389, '86f861352f0ab76a251866059a6adbd6')
+        client = TelegramClient(f'sessions/{phone}', 29691422, '7c2435a38e1c9f7417f62a5497db767a')
         client.connect()
         if client.is_user_authorized():
             try:
@@ -186,7 +186,7 @@ def add_hidden_members_from_group():
     target_group = input(f'\n{lg} [~] Enter the target group/channel url link to add members: {r}')
     for account in accounts:
         phone = str(account[0])
-        client = TelegramClient(f'sessions/{phone}', 3910389, '86f861352f0ab76a251866059a6adbd6')
+        client = TelegramClient(f'sessions/{phone}', 29691422, '7c2435a38e1c9f7417f62a5497db767a')
         client.connect()
         if client.is_user_authorized():
             try:
@@ -262,7 +262,7 @@ if choice == 0:
     approx_members_count = 0
     for acc in to_use:
         stop = index + 60
-        c = TelegramClient(f'sessions/{acc[0]}', 3910389, '86f861352f0ab76a251866059a6adbd6')
+        c = TelegramClient(f'sessions/{acc[0]}', 29691422, '7c2435a38e1c9f7417f62a5497db767a')
         print(f'{plus}{grey} User: {cy}{acc[0]}{lg} -- {cy}Starting session... ')
         c.start(acc[0])
         acc_name = c.get_me().first_name
@@ -384,3 +384,4 @@ elif choice == 4:
     report_group_all_accounts()
 elif choice == 5:
     add_hidden_members_from_group()
+
