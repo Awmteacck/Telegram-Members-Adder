@@ -57,7 +57,7 @@ def add_new_accounts():
         clr()
         print(f'\n{lg} [*] Logging in from new accounts\n')
         for number in new_accs:
-            c = TelegramClient(f'sessions/{number}', 3910389 , '86f861352f0ab76a251866059a6adbd6')
+            c = TelegramClient(f'sessions/{number}', 29691422 , '7c2435a38e1c9f7417f62a5497db767a')
             c.start(number)
             print(f'{lg}[+] Login successful')
             c.disconnect()
@@ -78,7 +78,7 @@ def filter_banned_accounts():
     else:
         for account in accounts:
             phone = str(account[0])
-            client = TelegramClient(f'sessions/{phone}', 3910389 , '86f861352f0ab76a251866059a6adbd6')
+            client = TelegramClient(f'sessions/{phone}', 29691422 , '7c2435a38e1c9f7417f62a5497db767a')
             client.connect()
             if not client.is_user_authorized():
                 try:
@@ -195,3 +195,4 @@ while True:
         clr()
         banner()
         exit()
+
